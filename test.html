@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style> 
+    /* Any p that exists within a footer */ 
+    footer p { 
+        color: white; 
+        font-weight: bold; 
+        font-size: 30px; 
+        padding: 5px; 
+    } 
+
+    /*All sections have an alice blue background colour*/ 
+    section{ background-color: aliceblue;} 
+    
+    /* Only the styles sections which are a direct child of a main element are over written*/ 
+    main > section { 
+        background-color: gainsboro; 
+        border: solid; 
+        margin : 10px; } 
+    
+        /* Selects any element which comes right after an h1 element */ 
+    h1 + * { 
+        background-color: lightskyblue; 
+        border: dotted; 
+        margin: 10px; 
+    } 
+    
+    /*Selects any element which comes after a p tag */ 
+    p ~ p { color: black; } 
+
+    footer { 
+        display: flex; 
+        height: 60px; border: solid; 
+        flex-direction: row; 
+        background-color: dodgerblue; 
+        justify-content: center; 
+    } 
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Main</h1> 
+    <main>
+        <section> Section 1 
+            <section> Section 1.1 
+            </section> 
+        </section> 
+        <section> Section 2 
+            <section> Section 2.1 </section> 
+        </section> 
+    </main> 
+    <h1>Footer</h1> 
+    <footer> 
+        <p>Foot p1</p> 
+        <p>Foot p2</p> 
+        <p>Foot p3</p> 
+    </footer>
+</body>
+</html>
